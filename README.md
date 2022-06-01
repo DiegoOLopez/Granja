@@ -36,28 +36,30 @@ Se hara el uso de 4 super clases con los siguientes atributos y metodos:
     - Colonia
     - Calle
   ii. Metodos
-    -
-    -
+    - getters & setters de los atributos
 
 Y ahora se crearan 3 subsclases:
 1. AniamlesGranja
   i. Atributos
-    -
-    -
+    - ID
+    - tipoAlimento
+    - estadoSalud
   ii. Metodos
-    -
-    -
+    - getters & setters de los atributos
 3. Personal
   i. Atributos
-    -
-    -
+    - cargo
+    - sueldoPorHora
+    - diasDeTrabajo
+    - profesion
+    - sueldoMensual
   ii. Metodos
-    -
-    -
+    - getters & setters de los atributos (excepto sueldoMensual)
+    - getter de sueldoMensual y agregar operacion matematica para calcular el sueldo mensual
 5. Proveedores
   i. Atributos
-    -
-    -
+    - productoComprado
+    - pesoProducto
+    - precioProducto
   ii. Metodos
-    -
-    -
+    - getters & setters de los atributos
