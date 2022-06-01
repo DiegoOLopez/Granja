@@ -1,5 +1,40 @@
 import java.sql.Date;
 public class animalesGranja extends animales{
+    /**
+     * Definicion de las variables
+     */
+    int ID;
+    String tipoAlimento, estadoSalud;
+    /**
+     * Implementacion de los metodos setters y getters de la clase animalesGranja
+     */
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getTipoAlimento() {
+        return tipoAlimento;
+    }
+
+    public void setTipoAlimento(String tipoAlimento) {
+        this.tipoAlimento = tipoAlimento;
+    }
+
+    public String getEstadoSalud() {
+        return estadoSalud;
+    }
+
+    public void setEstadoSalud(String estadoSalud) {
+        this.estadoSalud = estadoSalud;
+    }
+
+    /**
+     * Implementacion de los metodos abstractos setters y getters de la clase animales
+     */
     @Override
     public String getEspecie() {
         return especie;
