@@ -2,7 +2,7 @@
 Programa de registro de animales de granja, personal y proveedores
 
 Se hara el uso de 4 super clases con los siguientes atributos y metodos:
-1. Animales
+1. animales //Clase aniamles
   i. Atributos
     - String especie //Especie a la que pertenece el animal
     - float peso //Peso del animal
@@ -10,7 +10,7 @@ Se hara el uso de 4 super clases con los siguientes atributos y metodos:
     - String sexo //sexo del animal
   ii. Metodos
     - getters & setters de los atributos //agregamos los get y set de cada uno de los atributos
-3. Persona Fisica
+3. personaFisica //Clase persona fisica
   i. Atributos
     - String nombre //Nombre de la persona fisica
     - String apellidoP //Apellido paterno de la persona fisica
@@ -19,7 +19,7 @@ Se hara el uso de 4 super clases con los siguientes atributos y metodos:
     - String sexo //Sexo de la persona fisica
   ii. Metodos
     - getters & setters de los atributos //agregamos los get y set de cada uno de los atributos
-5. Persona Moral
+5. personaMoral //Clase de una persona moral
   i. Atributos
     - String nombreEmpresa //Nombre de la empresa
     - Date fechaRegistro //Fecha de registro de la empresa
@@ -27,7 +27,7 @@ Se hara el uso de 4 super clases con los siguientes atributos y metodos:
     - String giro //A que se dedica la empresa o giro de la empresa
   ii. Metodos
     - getters & setters de los atributos //agregamos los get y set de cada uno de los atributos
-7. Domicilio
+7. domicilio //Clase de domicilio
   i. Atributos
     - String Pais //pais al que pertenece la persona
     - String Estado //estado al que pertenece la persona
@@ -38,14 +38,14 @@ Se hara el uso de 4 super clases con los siguientes atributos y metodos:
   ii. Metodos
     - getters & setters de los atributos //agregamos los get y set de cada uno de los atributos
 Y ahora se crearan 3 subsclases:
-1. AniamlesGranja
+1. animalesGranja //Clase animales granja
   i. Atributos
     - int ID //Identificador del animal
     - String tipoAlimento //El alimento que consume el animal
     - String estadoSalud //Como se encuentra de salud el animal
   ii. Metodos
     - getters & setters de los atributos
-3. Personal
+3. personalGranja //Clase del personal de la granja
   i. Atributos
     - String cargo //Cargo que tiene el personal (Minimo 141 pesos)
     - float sueldoPorHora //Sueldo que recibe por hora el personal
@@ -56,7 +56,7 @@ Y ahora se crearan 3 subsclases:
   ii. Metodos
     - getters & setters de los atributos (excepto sueldoMensual) //agregamos los get y set de cada uno de los atributos excepto de sueldoMensual
     - getter de sueldoMensual y agregar operacion matematica para calcular el sueldo mensual //calculo del sueldo mensual
-5. Proveedores
+5. proveedoresGranja //Clase de los proveedores de la granja
   i. Atributos
     - String productoComprado //Que tipo de producto compramos al proveedor
     - String pesoProducto //El peso de cada producto que compramos al proveedor
