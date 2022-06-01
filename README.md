@@ -84,3 +84,9 @@ Y ahora se crearan 3 subsclases:
   
   ii. Metodos
     - getters & setters de los atributos //agregamos los get y set de cada uno de los atributos
+
+## Al final agregar una INTERFAZ GRAFICA PRINCIPAL para las siguientes interfaces:
+
+1. Animales
+2. Personal
+3. Proveedores  
