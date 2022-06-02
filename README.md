@@ -90,3 +90,4 @@ Y ahora se crearan 3 subsclases:
 1. Animales
 2. Personal
 3. Proveedores  
+![Diagrama en blanco](https://user-images.githubusercontent.com/92211663/171662881-5381b020-a6ee-435f-b6e2-d1114c0aa0f4.png)
