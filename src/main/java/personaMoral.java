@@ -1,7 +1,9 @@
 
 import java.sql.Date;
 
-public abstract class personaMoral {
+public abstract class personaMoral implements domicilio{
+
+
 
  //Definicion de variables
     String nombreEmpresa,RFC,giro;

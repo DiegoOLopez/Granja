@@ -7,6 +7,9 @@ public class proveedoresGranja extends personaMoral{
     String productoComprado,pesoProducto;
     float precioProducto;
 
+    //Variables de domicilio interface
+    String pais, estado, municipio, localidad, calle;
+
     //Metodos getter and setter// 
     public String getProductoComprado() {
         return productoComprado;
@@ -73,8 +76,63 @@ public class proveedoresGranja extends personaMoral{
     public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro=fechaRegistro;
     }
-    
-    
+
+    /**
+     * Metodos de interface domicilio
+     */
+
+    @Override
+    public String getPais() {
+        return pais;
+    }
+
+    @Override
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    @Override
+    public String getEstado() {
+        return estado;
+    }
+
+    @Override
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    @Override
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
+    @Override
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    @Override
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    @Override
+    public String getCalle() {
+        return calle;
+    }
+
+    @Override
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+
+
+
     
     
     
