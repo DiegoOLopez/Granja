@@ -72,7 +72,7 @@
                                       <Component id="sueldoPorHoraL" max="32767" attributes="0"/>
                                       <Component id="horasTrabajoL" max="32767" attributes="0"/>
                                       <Component id="sueldoMensualL" max="32767" attributes="0"/>
-                                      <Component id="DiasTrabajoL" pref="151" max="32767" attributes="0"/>
+                                      <Component id="diasTrabajoL" pref="151" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -172,7 +172,7 @@
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="DiasTrabajoL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="diasTrabajoL" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -288,9 +288,9 @@
             <Property name="text" type="java.lang.String" value="Dias trabajados:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="DiasTrabajoL">
+        <Component class="javax.swing.JTextField" name="diasTrabajoL">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DiasTrabajoLActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="diasTrabajoLActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

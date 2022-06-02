@@ -3,7 +3,7 @@ import java.sql.Date;
 public class personal extends personaFisica{
     //Atributos
     String Cargo, profesion;
-    float sueldoPorHora, horasTrabajo, sueldoMensual;
+    int sueldoPorHora, horasTrabajo, sueldoMensual;
     int diasDeTrabajo;
     
     public String getCargo() {
@@ -21,39 +21,41 @@ public class personal extends personaFisica{
         this.profesion = profesion;
     }
 
-    public float getSueldoPorHora() {
+    public int getSueldoPorHora() {
         return sueldoPorHora;
     }
 
-    public void setSueldoPorHora(float sueldoPorHora) {
+    public void setSueldoPorHora(int sueldoPorHora) {
         this.sueldoPorHora = sueldoPorHora;
     }
 
-    public float getHorasTrabajo() {
+    public int getHorasTrabajo() {
         return horasTrabajo;
     }
 
-    public void setHorasTrabajo(float horasTrabajo) {
+    public void setHorasTrabajo(int horasTrabajo) {
         this.horasTrabajo = horasTrabajo;
     }
 
-    public float getSueldoMensual() {
-        sueldoMensual = (horasTrabajo* sueldoPorHora*diasDeTrabajo)*4;
-        return sueldoMensual;
-    }
-
-    public void setSueldoMensual(float sueldoMensual) {
-        this.sueldoMensual = sueldoMensual;
-    }
 
     public int getDiasDeTrabajo() {
         return diasDeTrabajo;
     }
 
-    //creacion de metodos
     public void setDiasDeTrabajo(int diasDeTrabajo) {
         this.diasDeTrabajo = diasDeTrabajo;
     }
+
+    public int getSueldoMensual() {
+        sueldoMensual = (horasTrabajo* sueldoPorHora*diasDeTrabajo)*4;
+        return sueldoMensual;
+    }
+
+    public void setSueldoMensual(int sueldoMensual) {
+        this.sueldoMensual = sueldoMensual;
+    }
+
+    //creacion de metodos
 
     //Metodos heredados de la clase personaFisica
     @Override

@@ -56,7 +56,7 @@ public class iPersonal extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         sueldoMensualL = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        DiasTrabajoL = new javax.swing.JTextField();
+        diasTrabajoL = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,9 +109,9 @@ public class iPersonal extends javax.swing.JFrame {
 
         jLabel11.setText("Dias trabajados:");
 
-        DiasTrabajoL.addActionListener(new java.awt.event.ActionListener() {
+        diasTrabajoL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DiasTrabajoLActionPerformed(evt);
+                diasTrabajoLActionPerformed(evt);
             }
         });
 
@@ -149,7 +149,7 @@ public class iPersonal extends javax.swing.JFrame {
                                     .addComponent(sueldoPorHoraL)
                                     .addComponent(horasTrabajoL)
                                     .addComponent(sueldoMensualL)
-                                    .addComponent(DiasTrabajoL, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))))
+                                    .addComponent(diasTrabajoL, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))))
                         .addGap(0, 10, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -224,7 +224,7 @@ public class iPersonal extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(DiasTrabajoL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(diasTrabajoL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sueldoMensualL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -260,7 +260,8 @@ public class iPersonal extends javax.swing.JFrame {
         data.setProfesion(ProfesionL.getText());
         data.setSueldoPorHora(Integer.parseInt(sueldoPorHoraL.getText()));
         data.setHorasTrabajo(Integer.parseInt(horasTrabajoL.getText()));
-        sueldoMensualL.setText("Sueldo");
+        data.setDiasDeTrabajo(Integer.parseInt(diasTrabajoL.getText()));
+        sueldoMensualL.setText(String.valueOf(data.getSueldoMensual()));
 
         try
         {
@@ -278,6 +279,7 @@ public class iPersonal extends javax.swing.JFrame {
                     +"\nProfesion: " +data.getProfesion()
                     +"\nSueldo por hora: " +data.getSueldoPorHora()
                     +"\nHoras Trabajadas: " +data.getHorasTrabajo()
+                    +"\nDias de trabajo semanales: " + data.getDiasDeTrabajo()
                     +"\nSueldo Mensual: " +data.getSueldoMensual()
                     
             );
@@ -292,7 +294,7 @@ public class iPersonal extends javax.swing.JFrame {
             ProfesionL.setText("");
             sueldoPorHoraL.setText("");
             horasTrabajoL.setText("");
-            sueldoMensualL.setText("");
+            diasTrabajoL.setText("");
         } catch (IOException ioe)
         {
             System.out.println("Registro de datos fallido");
@@ -311,9 +313,9 @@ public class iPersonal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_sueldoMensualLActionPerformed
 
-    private void DiasTrabajoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiasTrabajoLActionPerformed
+    private void diasTrabajoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diasTrabajoLActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DiasTrabajoLActionPerformed
+    }//GEN-LAST:event_diasTrabajoLActionPerformed
 
     /**
      * @param args the command line arguments
@@ -354,10 +356,10 @@ public class iPersonal extends javax.swing.JFrame {
     private javax.swing.JTextField ApellidoML;
     private javax.swing.JTextField ApellidoPL;
     private javax.swing.JTextField CargoL;
-    private javax.swing.JTextField DiasTrabajoL;
     private javax.swing.JTextField NombreL;
     private javax.swing.JTextField ProfesionL;
     private javax.swing.JTextField SexoL;
+    private javax.swing.JTextField diasTrabajoL;
     private javax.swing.JTextField fechaNacimientoL;
     private javax.swing.JTextField horasTrabajoL;
     private javax.swing.JButton jButton1;
