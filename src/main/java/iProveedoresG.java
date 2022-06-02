@@ -266,6 +266,11 @@ public class iProveedoresG extends javax.swing.JFrame {
         data.setRFC(RFC.getText());
         data.setGiro(giro.getText());
         data.setFechaRegistro(Date.valueOf(fechaRegistro.getText()));
+        data.setPais(paisL.getText());
+        data.setEstado(estadoL.getText());
+        data.setMunicipio(municipioL.getText());
+        data.setLocalidad(localidadL.getText());
+        data.setCalle(calleL.getText());
         data.setProductoComprado(productoComprado.getText());
         data.setPesoProducto(pesoProducto.getText());
         data.setPrecioProducto(Integer.parseInt(precioProducto.getText()));
@@ -281,6 +286,11 @@ public class iProveedoresG extends javax.swing.JFrame {
                             + "\nRFC: " + data.getRFC()
                             + "\nGiro: " + data.getGiro()
                             + "\nFecha de Registro: " + data.getFechaRegistro()
+                            + "\nPais: " + data.getPais()
+                            + "\nEstado: " + data.getEstado()   
+                            + "\nMunicipio: " + data.getMunicipio() 
+                            + "\nLocalidad: " + data.getLocalidad()  
+                            + "\nCalle: " + data.getCalle() 
                             + "\nProducto Comprado: " + data.getProductoComprado()
                             + "\nPeso Producto: " + data.getPesoProducto()
                             + "\nPrecio de Producto: " + data.getPrecioProducto()
@@ -291,6 +301,11 @@ public class iProveedoresG extends javax.swing.JFrame {
             RFC.setText("");
             giro.setText("");
             fechaRegistro.setText("");
+            paisL.setText("");
+            estadoL.setText("");
+            municipioL.setText("");
+            localidadL.setText("");
+            calleL.setText("");
             productoComprado.setText("");
             pesoProducto.setText("");
             precioProducto.setText("");
