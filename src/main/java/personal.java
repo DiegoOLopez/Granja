@@ -99,4 +99,59 @@ public class personal extends personaFisica{
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento=fechaNacimiento;}
 
+
+    /**
+     *
+     *
+     */
+
+    @Override
+    public String getPais() {
+        return pais;
+    }
+
+    @Override
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    @Override
+    public String getEstado() {
+        return estado;
+    }
+
+    @Override
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    @Override
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
+    @Override
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    @Override
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    @Override
+    public String getCalle() {
+        return calle;
+    }
+
+    @Override
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
 }

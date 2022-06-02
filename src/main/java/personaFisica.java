@@ -1,10 +1,14 @@
 import java.sql.Date;
 
-public abstract class personaFisica {
+public abstract class personaFisica implements domicilio {
     
     //Atributos
     String Nombre, ApellidoP, ApellidoM, Sexo;
     Date fechaNacimiento;
+
+    //Atriburos Domicilio
+
+    String pais, estado, municipio, localidad, calle;
 
     //Definicion de metodos
     public abstract String getNombre();
