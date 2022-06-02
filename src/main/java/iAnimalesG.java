@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.sql.Date;
+
 /**
  *
  * @author cer
@@ -57,7 +62,7 @@ public class iAnimalesG extends javax.swing.JFrame {
 
         jLabel3.setText("Especie:");
 
-        jLabel4.setText("Fecha nacimiento (dd/mm/yyyy):");
+        jLabel4.setText("Fecha nacimiento (yyyy-mm-dd):");
 
         fechaNacimientoL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +85,11 @@ public class iAnimalesG extends javax.swing.JFrame {
         jLabel8.setText("Estado de salud:");
 
         registrarB.setText("Registrar");
+        registrarB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrarBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -180,6 +190,47 @@ public class iAnimalesG extends javax.swing.JFrame {
     private void sexoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoLActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sexoLActionPerformed
+
+    private void registrarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarBActionPerformed
+        // TODO add your handling code here:
+        animalesGranja data = new animalesGranja();
+        data.setEspecie(especieL.getText());
+        data.setPeso(Float.parseFloat(pesoL.getText()));
+        data.setFechaNacimiento(Date.valueOf(fechaNacimientoL.getText()));
+        data.setSexo(sexoL.getText());
+        data.setID(Integer.parseInt(IDL.getText()));
+        data.setTipoAlimento(tipoAlimentoL.getText());
+        data.setEstadoSalud(estadoSaludL.getText());
+        try
+        {
+            BufferedWriter bwData = new BufferedWriter(new FileWriter("AnimalesGranja.txt"));
+            System.out.println("Registro de datos exitoso");
+            bwData.write
+                    (
+                            "Datos de animales"
+                            +"\nEspecie: " + data.getEspecie()
+                            + "\nPeso: " + data.getPeso()
+                            + "\nFecha de nacimiento " + data.getFechaNacimiento()
+                            + "\nSexo: " + data.getSexo()
+                            + "\nID: " + data.getID()
+                            + "\nTipo de alimento: " + data.getTipoAlimento()
+                            + "\nEstado de salud: " + data.getEstadoSalud()
+                    );
+            bwData.close();
+
+            especieL.setText("");
+            pesoL.setText("");
+            fechaNacimientoL.setText("");
+            sexoL.setText("");
+            IDL.setText("");
+            tipoAlimentoL.setText("");
+            estadoSaludL.setText("");
+        } catch (IOException ioe)
+        {
+            System.out.println("Registro de datos fallido");
+        }
+
+    }//GEN-LAST:event_registrarBActionPerformed
 
     /**
      * @param args the command line arguments
