@@ -47,6 +47,8 @@ public class iAnimalesG extends javax.swing.JFrame {
         estadoSaludL = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         registrarB = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +93,21 @@ public class iAnimalesG extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Editar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jButton2.setText(" <---");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -118,9 +135,13 @@ public class iAnimalesG extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(registrarB)
-                .addGap(202, 202, 202))
+                .addGap(80, 80, 80)
+                .addComponent(jButton1)
+                .addGap(47, 47, 47))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(198, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(184, 184, 184))
         );
@@ -128,7 +149,9 @@ public class iAnimalesG extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -159,7 +182,9 @@ public class iAnimalesG extends javax.swing.JFrame {
                     .addComponent(estadoSaludL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
-                .addComponent(registrarB)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(registrarB)
+                    .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -181,6 +206,7 @@ public class iAnimalesG extends javax.swing.JFrame {
 
     private void especieLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_especieLActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_especieLActionPerformed
 
     private void fechaNacimientoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechaNacimientoLActionPerformed
@@ -189,6 +215,7 @@ public class iAnimalesG extends javax.swing.JFrame {
 
     private void sexoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoLActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_sexoLActionPerformed
 
     private void registrarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarBActionPerformed
@@ -232,6 +259,20 @@ public class iAnimalesG extends javax.swing.JFrame {
 
     }//GEN-LAST:event_registrarBActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:JFGestionA a = new  JFGestionA();
+        JFGestionA a = new  JFGestionA();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Menu a = new  Menu();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -272,6 +313,8 @@ public class iAnimalesG extends javax.swing.JFrame {
     private javax.swing.JTextField especieL;
     private javax.swing.JTextField estadoSaludL;
     private javax.swing.JTextField fechaNacimientoL;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

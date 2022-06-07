@@ -57,6 +57,8 @@ public class iPersonal extends javax.swing.JFrame {
         sueldoMensualL = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         diasTrabajoL = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,62 +73,33 @@ public class iPersonal extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre(s):");
 
-        NombreL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                NombreLKeyTyped(evt);
+        NombreL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreLActionPerformed(evt);
             }
         });
 
         jLabel2.setText("Apellido Paterno:");
 
-        ApellidoPL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                ApellidoPLKeyTyped(evt);
+        ApellidoPL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApellidoPLActionPerformed(evt);
             }
         });
 
         jLabel3.setText("Apellido Materno:");
 
-        ApellidoML.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                ApellidoMLKeyTyped(evt);
-            }
-        });
-
         jLabel4.setText("Sexo:");
-
-        SexoL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                SexoLKeyTyped(evt);
-            }
-        });
 
         jLabel5.setText("Fecha de nacimiento (yyyy-mm-dd)");
 
-        fechaNacimientoL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                fechaNacimientoLKeyTyped(evt);
-            }
-        });
-
         jLabel6.setText("Cargo:");
-
-        CargoL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                CargoLKeyTyped(evt);
-            }
-        });
 
         jLabel7.setText("Profeción:");
 
         ProfesionL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProfesionLActionPerformed(evt);
-            }
-        });
-        ProfesionL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                ProfesionLKeyTyped(evt);
             }
         });
 
@@ -137,30 +110,14 @@ public class iPersonal extends javax.swing.JFrame {
                 sueldoPorHoraLActionPerformed(evt);
             }
         });
-        sueldoPorHoraL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                sueldoPorHoraLKeyTyped(evt);
-            }
-        });
 
         jLabel8.setText("Horas trabajadas:");
-
-        horasTrabajoL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                horasTrabajoLKeyTyped(evt);
-            }
-        });
 
         jLabel10.setText("Sueldo mensual:");
 
         sueldoMensualL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sueldoMensualLActionPerformed(evt);
-            }
-        });
-        sueldoMensualL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                sueldoMensualLKeyTyped(evt);
             }
         });
 
@@ -171,9 +128,19 @@ public class iPersonal extends javax.swing.JFrame {
                 diasTrabajoLActionPerformed(evt);
             }
         });
-        diasTrabajoL.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                diasTrabajoLKeyTyped(evt);
+
+        jButton2.setText("Editar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jButton3.setText(" <---");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -229,21 +196,26 @@ public class iPersonal extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
-                            .addComponent(jLabel8))
+                            .addComponent(jLabel8)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jButton3)
+                                .addGap(74, 74, 74)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel17)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addGap(43, 43, 43)
+                                        .addComponent(jButton2)))))
                         .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(jButton1))
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel17)
-                .addGap(12, 12, 12)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jButton3))
+                .addGap(9, 9, 9)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(NombreL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -292,7 +264,9 @@ public class iPersonal extends javax.swing.JFrame {
                     .addComponent(sueldoMensualL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -442,6 +416,28 @@ public class iPersonal extends javax.swing.JFrame {
         if(c<'0'||c>'9') evt.consume();
     }//GEN-LAST:event_sueldoMensualLKeyTyped
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+           JFGestionA a = new  JFGestionA();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Menu a = new  Menu();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void NombreLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreLActionPerformed
+
+    private void ApellidoPLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoPLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApellidoPLActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -488,6 +484,8 @@ public class iPersonal extends javax.swing.JFrame {
     private javax.swing.JTextField fechaNacimientoL;
     private javax.swing.JTextField horasTrabajoL;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
