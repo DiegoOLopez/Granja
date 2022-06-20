@@ -118,6 +118,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         JFGestionA F1 = new JFGestionA();
         F1.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_ButtonGestionActionPerformed
 
@@ -125,19 +126,21 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         iPersonal F2 = new iPersonal();
         F2.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_ButtonPersonalActionPerformed
 
     private void ButtonAnimalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAnimalesActionPerformed
         // TODO add your handling code here:
         iAnimalesG F3 = new iAnimalesG();
         F3.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_ButtonAnimalesActionPerformed
 
     private void ButtonProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonProveedoresActionPerformed
         // TODO add your handling code here:
         iProveedoresG F4 = new iProveedoresG();
         F4.setVisible(true);
-        
+        this.setVisible(false);
     }//GEN-LAST:event_ButtonProveedoresActionPerformed
 
     /**
