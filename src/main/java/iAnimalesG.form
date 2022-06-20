@@ -149,9 +149,13 @@
         <Component class="javax.swing.JTextField" name="especieL">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="especieLActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="especieLKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="pesoL">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="pesoLKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -171,6 +175,7 @@
         <Component class="javax.swing.JTextField" name="sexoL">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sexoLActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="sexoLKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -184,6 +189,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="IDL">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="IDLKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="tipoAlimentoL">
         </Component>

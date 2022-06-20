@@ -78,6 +78,11 @@ public class iPersonal extends javax.swing.JFrame {
                 NombreLActionPerformed(evt);
             }
         });
+        NombreL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NombreLKeyTyped(evt);
+            }
+        });
 
         jLabel2.setText("Apellido Paterno:");
 
@@ -86,20 +91,54 @@ public class iPersonal extends javax.swing.JFrame {
                 ApellidoPLActionPerformed(evt);
             }
         });
+        ApellidoPL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ApellidoPLKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Apellido Materno:");
 
+        ApellidoML.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ApellidoMLKeyTyped(evt);
+            }
+        });
+
         jLabel4.setText("Sexo:");
+
+        SexoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                SexoLKeyTyped(evt);
+            }
+        });
 
         jLabel5.setText("Fecha de nacimiento (yyyy-mm-dd)");
 
+        fechaNacimientoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fechaNacimientoLKeyTyped(evt);
+            }
+        });
+
         jLabel6.setText("Cargo:");
+
+        CargoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                CargoLKeyTyped(evt);
+            }
+        });
 
         jLabel7.setText("Profeción:");
 
         ProfesionL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProfesionLActionPerformed(evt);
+            }
+        });
+        ProfesionL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ProfesionLKeyTyped(evt);
             }
         });
 
@@ -110,8 +149,19 @@ public class iPersonal extends javax.swing.JFrame {
                 sueldoPorHoraLActionPerformed(evt);
             }
         });
+        sueldoPorHoraL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                sueldoPorHoraLKeyTyped(evt);
+            }
+        });
 
         jLabel8.setText("Horas trabajadas:");
+
+        horasTrabajoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                horasTrabajoLKeyTyped(evt);
+            }
+        });
 
         jLabel10.setText("Sueldo mensual:");
 
@@ -120,12 +170,22 @@ public class iPersonal extends javax.swing.JFrame {
                 sueldoMensualLActionPerformed(evt);
             }
         });
+        sueldoMensualL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                sueldoMensualLKeyTyped(evt);
+            }
+        });
 
         jLabel11.setText("Dias trabajados:");
 
         diasTrabajoL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 diasTrabajoLActionPerformed(evt);
+            }
+        });
+        diasTrabajoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                diasTrabajoLKeyTyped(evt);
             }
         });
 
@@ -347,6 +407,8 @@ public class iPersonal extends javax.swing.JFrame {
 
     private void sueldoMensualLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sueldoMensualLActionPerformed
         // TODO add your handling code here:
+        sueldoMensualL.setEditable(false);
+        sueldoMensualL.setEnabled(false);
     }//GEN-LAST:event_sueldoMensualLActionPerformed
 
     private void diasTrabajoLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diasTrabajoLActionPerformed

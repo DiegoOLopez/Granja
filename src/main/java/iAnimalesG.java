@@ -61,6 +61,17 @@ public class iAnimalesG extends javax.swing.JFrame {
                 especieLActionPerformed(evt);
             }
         });
+        especieL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                especieLKeyTyped(evt);
+            }
+        });
+
+        pesoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                pesoLKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Especie:");
 
@@ -77,10 +88,21 @@ public class iAnimalesG extends javax.swing.JFrame {
                 sexoLActionPerformed(evt);
             }
         });
+        sexoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                sexoLKeyTyped(evt);
+            }
+        });
 
         jLabel5.setText("Sexo:");
 
         jLabel6.setText("ID:");
+
+        IDL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                IDLKeyTyped(evt);
+            }
+        });
 
         jLabel7.setText("Tipo de alimento:");
 
@@ -272,6 +294,31 @@ public class iAnimalesG extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void especieLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_especieLKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_especieLKeyTyped
+
+    private void pesoLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pesoLKeyTyped
+        // TODO add your handling code here:
+        char c= evt.getKeyChar();
+        if(c<'0'||c>'9') evt.consume();
+    }//GEN-LAST:event_pesoLKeyTyped
+
+    private void sexoLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sexoLKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_sexoLKeyTyped
+
+    private void IDLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IDLKeyTyped
+        // TODO add your handling code here:
+        char c= evt.getKeyChar();
+        if(c<'0'||c>'9') evt.consume();
+        
+    }//GEN-LAST:event_IDLKeyTyped
 
     /**
      * @param args the command line arguments

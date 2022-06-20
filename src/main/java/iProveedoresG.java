@@ -68,7 +68,24 @@ public class iProveedoresG extends javax.swing.JFrame {
 
         jLabel18.setText("Nombre de la Empresa:");
 
+        nombreEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreEmpresaActionPerformed(evt);
+            }
+        });
+        nombreEmpresa.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombreEmpresaKeyTyped(evt);
+            }
+        });
+
         jLabel19.setText("Giro:");
+
+        giro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                giroKeyTyped(evt);
+            }
+        });
 
         jLabel20.setText("Fecha de Registro(YYYY-MM-DD):");
 
@@ -85,12 +102,45 @@ public class iProveedoresG extends javax.swing.JFrame {
                 RFCActionPerformed(evt);
             }
         });
+        RFC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                RFCKeyTyped(evt);
+            }
+        });
 
         jLabel22.setText("Producto Comprado:");
 
+        productoComprado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productoCompradoActionPerformed(evt);
+            }
+        });
+        productoComprado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                productoCompradoKeyPressed(evt);
+            }
+        });
+
         jLabel23.setText("Peso de Producto:");
 
+        pesoProducto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                pesoProductoKeyTyped(evt);
+            }
+        });
+
         jLabel24.setText("Precio del Producto:");
+
+        precioProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precioProductoActionPerformed(evt);
+            }
+        });
+        precioProducto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                precioProductoKeyTyped(evt);
+            }
+        });
 
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,9 +161,32 @@ public class iProveedoresG extends javax.swing.JFrame {
 
         jLabel6.setText("Calle");
 
+        paisL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                paisLKeyTyped(evt);
+            }
+        });
+
+        estadoL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                estadoLKeyTyped(evt);
+            }
+        });
+
+        municipioL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                municipioLKeyTyped(evt);
+            }
+        });
+
         localidadL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 localidadLActionPerformed(evt);
+            }
+        });
+        localidadL.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                localidadLKeyTyped(evt);
             }
         });
 
@@ -282,6 +355,7 @@ public class iProveedoresG extends javax.swing.JFrame {
 
     private void RFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RFCActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_RFCActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -358,6 +432,78 @@ public class iProveedoresG extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void nombreEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreEmpresaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreEmpresaActionPerformed
+
+    private void nombreEmpresaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreEmpresaKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_nombreEmpresaKeyTyped
+
+    private void giroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_giroKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_giroKeyTyped
+
+    private void paisLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_paisLKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_paisLKeyTyped
+
+    private void estadoLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_estadoLKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_estadoLKeyTyped
+
+    private void municipioLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_municipioLKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_municipioLKeyTyped
+
+    private void localidadLKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_localidadLKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_localidadLKeyTyped
+
+    private void productoCompradoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_productoCompradoKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_productoCompradoKeyPressed
+
+    private void pesoProductoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pesoProductoKeyTyped
+        // TODO add your handling code here:
+        char c= evt.getKeyChar();
+        if(c<'0'||c>'9') evt.consume();
+    }//GEN-LAST:event_pesoProductoKeyTyped
+
+    private void precioProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precioProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precioProductoActionPerformed
+
+    private void precioProductoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precioProductoKeyTyped
+        // TODO add your handling code here:
+        char c= evt.getKeyChar();
+        if(c<'0'||c>'9') evt.consume();
+    }//GEN-LAST:event_precioProductoKeyTyped
+
+    private void productoCompradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productoCompradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productoCompradoActionPerformed
+
+    private void RFCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RFCKeyTyped
+        // TODO add your handling code here:
+        RFC.setEditable(false);
+        RFC.setEnabled(false);
+    }//GEN-LAST:event_RFCKeyTyped
 
     /**
      * @param args the command line arguments
