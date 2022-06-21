@@ -42,7 +42,6 @@ public class iProveedoresG extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         RFC = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        productoComprado = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         pesoProducto = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
@@ -61,6 +60,7 @@ public class iProveedoresG extends javax.swing.JFrame {
         calleL = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        productoComprado = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,17 +109,6 @@ public class iProveedoresG extends javax.swing.JFrame {
         });
 
         jLabel22.setText("Producto Comprado:");
-
-        productoComprado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productoCompradoActionPerformed(evt);
-            }
-        });
-        productoComprado.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                productoCompradoKeyPressed(evt);
-            }
-        });
 
         jLabel23.setText("Peso de Producto:");
 
@@ -205,6 +194,12 @@ public class iProveedoresG extends javax.swing.JFrame {
             }
         });
 
+        productoComprado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                productoCompradoKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -234,13 +229,13 @@ public class iProveedoresG extends javax.swing.JFrame {
                                         .addGap(73, 73, 73)
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(pesoProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                                            .addComponent(productoComprado, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                                             .addComponent(precioProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                                             .addComponent(paisL)
                                             .addComponent(estadoL)
                                             .addComponent(municipioL)
                                             .addComponent(localidadL)
-                                            .addComponent(calleL)))
+                                            .addComponent(calleL)
+                                            .addComponent(productoComprado)))
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel18)
@@ -314,21 +309,21 @@ public class iProveedoresG extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(calleL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(jLabel22))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel22)
                             .addComponent(productoComprado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(6, 6, 6)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel23)
                             .addComponent(pesoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(precioProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel24)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -473,12 +468,6 @@ public class iProveedoresG extends javax.swing.JFrame {
         if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
     }//GEN-LAST:event_localidadLKeyTyped
 
-    private void productoCompradoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_productoCompradoKeyPressed
-        // TODO add your handling code here:
-        char c = evt.getKeyChar();
-        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
-    }//GEN-LAST:event_productoCompradoKeyPressed
-
     private void pesoProductoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pesoProductoKeyTyped
         // TODO add your handling code here:
         char c= evt.getKeyChar();
@@ -495,15 +484,17 @@ public class iProveedoresG extends javax.swing.JFrame {
         if(c<'0'||c>'9') evt.consume();
     }//GEN-LAST:event_precioProductoKeyTyped
 
-    private void productoCompradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productoCompradoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productoCompradoActionPerformed
-
     private void RFCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_RFCKeyTyped
         // TODO add your handling code here:
         RFC.setEditable(false);
         RFC.setEnabled(false);
     }//GEN-LAST:event_RFCKeyTyped
+
+    private void productoCompradoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_productoCompradoKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c<'a'||c>'z')&&(c<'A'||c>'Z')) evt.consume();
+    }//GEN-LAST:event_productoCompradoKeyTyped
 
     /**
      * @param args the command line arguments
