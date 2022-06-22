@@ -1,5 +1,6 @@
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Date;
@@ -368,10 +369,15 @@ public class iProveedoresG extends javax.swing.JFrame {
         data.setProductoComprado(productoComprado.getText());
         data.setPesoProducto(pesoProducto.getText());
         data.setPrecioProducto(Integer.parseInt(precioProducto.getText()));
-      
+        FileWriter fw;
         try
         {
-            BufferedWriter bwData = new BufferedWriter(new FileWriter("ProvedoresGranja.txt"));
+            File file = new File("Registro de animales.txt");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            BufferedWriter bwData = new BufferedWriter(fw);
             System.out.println("Registro de datos exitoso");
             bwData.write
                     (
@@ -388,6 +394,7 @@ public class iProveedoresG extends javax.swing.JFrame {
                             + "\nProducto Comprado: " + data.getProductoComprado()
                             + "\nPeso Producto: " + data.getPesoProducto()
                             + "\nPrecio de Producto: " + data.getPrecioProducto()
+                            + "\n\n"
                     );
             bwData.close();
 

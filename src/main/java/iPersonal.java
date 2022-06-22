@@ -1,4 +1,5 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Date;
@@ -358,10 +359,15 @@ public class iPersonal extends javax.swing.JFrame {
         data.setHorasTrabajo(Integer.parseInt(horasTrabajoL.getText()));
         data.setDiasDeTrabajo(Integer.parseInt(diasTrabajoL.getText()));
         sueldoMensualL.setText(String.valueOf(data.getSueldoMensual()));
-
+        FileWriter fw;
         try
         {
-            BufferedWriter bwData = new BufferedWriter(new FileWriter("Personal.txt"));
+            File file = new File("Registro de personal.txt");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            BufferedWriter bwData = new BufferedWriter(fw);
             System.out.println("Registro de datos exitoso");
             bwData.write
             (
@@ -377,7 +383,7 @@ public class iPersonal extends javax.swing.JFrame {
                     +"\nHoras Trabajadas: " +data.getHorasTrabajo()
                     +"\nDias de trabajo semanales: " + data.getDiasDeTrabajo()
                     +"\nSueldo Mensual: " +data.getSueldoMensual()
-                    
+                        + "\n\n"
             );
             bwData.close();
 

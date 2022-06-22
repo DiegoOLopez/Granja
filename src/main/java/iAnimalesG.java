@@ -1,9 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Date;
@@ -250,9 +246,15 @@ public class iAnimalesG extends javax.swing.JFrame {
         data.setID(Integer.parseInt(IDL.getText()));
         data.setTipoAlimento(tipoAlimentoL.getText());
         data.setEstadoSalud(estadoSaludL.getText());
+        FileWriter fw;
         try
         {
-            BufferedWriter bwData = new BufferedWriter(new FileWriter("AnimalesGranja.txt"));
+            File file = new File("Registro de animales.txt");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            BufferedWriter bwData = new BufferedWriter(fw);
             System.out.println("Registro de datos exitoso");
             bwData.write
                     (
@@ -264,6 +266,7 @@ public class iAnimalesG extends javax.swing.JFrame {
                             + "\nID: " + data.getID()
                             + "\nTipo de alimento: " + data.getTipoAlimento()
                             + "\nEstado de salud: " + data.getEstadoSalud()
+                            + "\n\n"
                     );
             bwData.close();
 
